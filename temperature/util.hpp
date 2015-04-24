@@ -30,7 +30,9 @@ tutorial::TemperatureScale char2tempscale(char s);
 // Converts a TemperatureScale into a string
 char tempscale2char(tutorial::TemperatureScale scale);
 
+#ifdef DDS_IMPLEMENTATION_opensplice
 std::ostream& operator<< (std::ostream& os, const tutorial::TempSensorType& ts);
+#endif
 
 
 #endif /* SIMD_DEMO_DDJ_01_UTIL_HPP_ */

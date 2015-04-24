@@ -12,6 +12,7 @@
 #include <thread>         // std::thread, std::this_thread::sleep_for
 #include <dds/pub/Publisher.hpp>
 #include <dds/pub/DataWriter.hpp>
+#include "util.hpp"
 
 int
 main(int argc, char* argv[])

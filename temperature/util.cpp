@@ -40,18 +40,18 @@ tutorial::TemperatureScale char2tempscale(char s) {
 }
 
 char tempscale2char(tutorial::TemperatureScale scale) {
-  switch (scale.underlying()) {
-    case tutorial::TemperatureScale::CELSIUS:
-        return 'C';
-    case tutorial::TemperatureScale::FAHRENHEIT:
-      return 'F';
-    case tutorial::TemperatureScale::KELVIN:
-      return 'K';
-    default:
-      return 'X';
+  if (scale == tutorial::TemperatureScale::CELSIUS) {
+    return 'C';
+  } else if (scale == tutorial::TemperatureScale::FAHRENHEIT) {
+    return 'F';
+  } else if (scale == tutorial::TemperatureScale::KELVIN) {
+    return 'K';
+  } else {
+    throw std::range_error("Unknown Temperature Scale");
   }
 }
 
+#ifdef DDS_IMPLEMENTATION_opensplice
 std::ostream&
 operator << (std::ostream& os, const tutorial::TempSensorType& ts)
 {
@@ -63,6 +63,6 @@ operator << (std::ostream& os, const tutorial::TempSensorType& ts)
      
   return os;
 }
-
+#endif
 
 

@@ -11,6 +11,7 @@
 #endif
 #include <thread>         // std::thread, std::this_thread::sleep_for
 
+#include "util.hpp"
 #include <dds/sub/Subscriber.hpp>
 #include <dds/sub/DataReader.hpp>
 
