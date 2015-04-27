@@ -18,7 +18,12 @@
 
 int main(int argc, char* argv[]) {
 
-  dds::domain::DomainParticipant dp(0);
+  dds::domain::qos::DomainParticipantQos qos;
+#ifdef DDS_IMPLEMENTATION_connext
+  qos->transport_builtin.mask = DDS_TRANSPORTBUILTIN_UDPv4;
+#endif
+
+  dds::domain::DomainParticipant dp(0, qos);
   dds::topic::Topic<tutorial::TempSensorType> topic(dp, "TTempSensor");
   dds::sub::Subscriber sub(dp);
   dds::sub::DataReader<tutorial::TempSensorType> dr(sub, topic);

@@ -24,8 +24,12 @@ main(int argc, char* argv[])
   int sid = atoi(argv[1]);
   const int N = 100;
 
+  dds::domain::qos::DomainParticipantQos qos;
+#ifdef DDS_IMPLEMENTATION_connext
+  qos->transport_builtin.mask = DDS_TRANSPORTBUILTIN_UDPv4;
+#endif
 
-  dds::domain::DomainParticipant dp(0);
+  dds::domain::DomainParticipant dp(0, qos);
   dds::topic::Topic<tutorial::TempSensorType> topic(dp, "TTempSensor");
   dds::pub::Publisher pub(dp);
   dds::pub::DataWriter<tutorial::TempSensorType> dw(pub, topic);
