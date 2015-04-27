@@ -5,17 +5,7 @@
 #include <time.h>
 #include <iostream>
 
-// -- Custom Include
-#ifdef DDS_IMPLEMENTATION_connext
-  #include <gen/TempControl.hpp>
-#else
-  #ifdef DDS_IMPLEMENTATION_opensplice
-    #include <gen/TempControl_DCPS.hpp>
-  #else
-    #error DDS_IMPLEMENTATION_ not set.
-  #endif
-#endif
-
+#include "TempControl.hpp"
 
 extern const long int        ONE_SECOND;
 extern const unsigned int    DEFAULT_SAMPLE_NUM;

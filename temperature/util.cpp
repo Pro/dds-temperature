@@ -1,8 +1,5 @@
 // -- Custom Include
 #include "util.hpp"
-// -- Boost Include
-// -- Std C++ Include
-#include <iostream>
 
 const long int       ONE_SECOND = 1E9;
 const unsigned int   DEFAULT_SAMPLE_NUM = 1E3;
