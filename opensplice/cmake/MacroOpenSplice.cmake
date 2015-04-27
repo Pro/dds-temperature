@@ -19,7 +19,6 @@ MACRO (DEFINE_OpenSplice_SOURCES idlfilename)
 	SET(outsources ${outsources} ${PROJECT_SOURCE_DIR}/gen/${nfile}Dcps.cpp ${PROJECT_SOURCE_DIR}/gen/${nfile}Dcps.h)
 	SET(outsources ${outsources} ${PROJECT_SOURCE_DIR}/gen/${nfile}Dcps_impl.cpp ${PROJECT_SOURCE_DIR}/gen/${nfile}Dcps_impl.h)
 	SET(outsources ${outsources} ${PROJECT_SOURCE_DIR}/gen/${nfile}SplDcps.cpp ${PROJECT_SOURCE_DIR}/gen/${nfile}SplDcps.h)
-	SET(outsources ${outsources} ${PROJECT_SOURCE_DIR}/gen/ccpp_${nfile}.h)
 ENDMACRO(DEFINE_OpenSplice_SOURCES)
 
 MACRO (OpenSplice_IDLGEN idlfilename)

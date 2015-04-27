@@ -35,8 +35,7 @@ foreach(idl ${idls})
 	string (REGEX REPLACE "${MY_CODE_DIR}/idl/\(.*\).idl" "./gen/\\1Dcps_impl.h" VARS_6 ${idl})
 	string (REGEX REPLACE "${MY_CODE_DIR}/idl/\(.*\).idl" "./gen/\\1SplDcps.cpp" VARS_7 ${idl})
 	string (REGEX REPLACE "${MY_CODE_DIR}/idl/\(.*\).idl" "./gen/\\1SplDcps.h" VARS_8 ${idl})
-	string (REGEX REPLACE "${MY_CODE_DIR}/idl/\(.*\).idl" "./gen/ccpp_\\1.h" VARS_9 ${idl})
-	set(OpenSplice_DATAMODEL ${OpenSplice_DATAMODEL} ${VARS_1} ${VARS_2} ${VARS_3} ${VARS_4} ${VARS_5} ${VARS_6} ${VARS_7} ${VARS_8} ${VARS_9})
+	set(OpenSplice_DATAMODEL ${OpenSplice_DATAMODEL} ${VARS_1} ${VARS_2} ${VARS_3} ${VARS_4} ${VARS_5} ${VARS_6} ${VARS_7} ${VARS_8})
 endforeach(idl)
 
 
