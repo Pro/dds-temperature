@@ -9,7 +9,6 @@ project(temperature_${DDS_IMPLEMENTATION})
 
 # Connext specific macros
 include (MacroConnext)
-include (osmacros)
 set (ARCHITECTURE x64Linux2.6gcc4.4.5)
 find_package (Connext REQUIRED)
 

@@ -8,7 +8,6 @@ project(temperature_${DDS_IMPLEMENTATION})
 
 # OpenSplice specific macros
 include (MacroOpenSplice)
-include (osmacros)
 find_package (OpenSplice REQUIRED)
 
 include_directories(
