@@ -2,6 +2,7 @@
 Code for testing code portability between different DDS implementations.
 
 The same C++ code compiles using either RTI Connext or PrismTech OpenSplice.
+RTI's C++11 implementation is currently only available in the Early Access Release (contact support for that).
 
 The tutorial code is based on: https://github.com/PrismTech/dds-tutorial-cpp-ex
 
