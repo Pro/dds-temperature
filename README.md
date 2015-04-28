@@ -6,6 +6,9 @@ RTI's C++11 implementation is currently only available in the Early Access Relea
 
 The tutorial code is based on: https://github.com/PrismTech/dds-tutorial-cpp-ex
 
+**License:**
+This code isn't bound to any license and can be freely used ([Public domain](https://wiki.creativecommons.org/Public_domain))
+
 ## How to build
 
 First make sure your RTI Connext and PrismTech OpenSplice is setup correctly and the environment variables are set.
