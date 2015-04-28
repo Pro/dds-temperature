@@ -16,6 +16,8 @@ int main(int argc, char *argv[]) {
 #ifdef DDS_IMPLEMENTATION_connext
     //Disable shared memory
     qos->transport_builtin.mask = DDS_TRANSPORTBUILTIN_UDPv4;
+
+    //Alternatively you can create a file named USER_QOS_PROFILES.xml. See e.g. https://community.rti.com/comment/851#comment-851
 #endif
 
     dds::domain::DomainParticipant dp(0, qos);
@@ -26,11 +28,9 @@ int main(int argc, char *argv[]) {
 
     while (true) {
         auto samples = dr.read();
-        std::for_each(samples.begin(),
-                      samples.end(),
-                      [](const dds::sub::Sample<tutorial::TempSensorType> &s) {
-                          std::cout << s.data() << std::endl;
-                      });
+        for (auto s: samples) {
+            std::cout << s.data() << std::endl;
+        }
         std::cout << "---" << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
